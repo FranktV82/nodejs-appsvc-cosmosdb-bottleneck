@@ -9,9 +9,9 @@ on:
         - main
 
 env:
-  AZURE_WEBAPP_NAME: "FrankTVApp01"    # set this to your application's name
-  LOAD_TEST_RESOURCE: "Testrig"
-  LOAD_TEST_RESOURCE_GROUP: "Frank"
+  AZURE_WEBAPP_NAME: "loadtestdemoftv1"    # set this to your application's name
+  LOAD_TEST_RESOURCE: "LoadTestAgent"
+  LOAD_TEST_RESOURCE_GROUP: "Testrig"
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   NODE_VERSION: '14.15.1'                # set this to the node version to use
   LOCATION: "westeurope"
