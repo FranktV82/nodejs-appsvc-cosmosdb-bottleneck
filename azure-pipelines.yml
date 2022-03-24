@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  webAppName: 'loadtestdemoftv3'
+  webAppName: 'loadtestdemoftv2'
   serviceConnection: 'Perftest'
   azureSubscriptionId: '8085b159-7289-4177-8749-f1298a8da7ea'
   loadTestResource: 'LoadTestAgentGit'
