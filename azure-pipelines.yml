@@ -13,9 +13,9 @@ variables:
   webAppName: 'loadtestdemoftv3'
   serviceConnection: 'Perftest'
   azureSubscriptionId: '8085b159-7289-4177-8749-f1298a8da7ea'
-  loadTestResource: 'LoadTestAgent'
+  loadTestResource: 'LoadTestAgentGit'
   loadTestResourceGroup: 'Testrig'
-  location: 'EAST US'
+  location: 'northeurope'
 
 
 stages:
