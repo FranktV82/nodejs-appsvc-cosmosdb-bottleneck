@@ -159,10 +159,7 @@ stages:
     - publish: $(System.DefaultWorkingDirectory)/loadTest
       artifact: result
 
-    - task: AzureCLI@2
+    - task: PowerShell@2
       inputs:
-        azureSubscription: 'Perftest'
-        scriptType: 'pscore'
-        scriptLocation: 'inlineScript'
-        inlineScript: 'Remove-AzureRmResourceGroup -Name $(webAppName)-rg'
-      
+        targetType: 'inline'
+        script: 'Remove-AzureRmResourceGroup -Name $(webAppName)-rg'
