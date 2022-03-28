@@ -162,7 +162,7 @@ stages:
     - task: AzureCLI@2
       inputs:
         azureSubscription: 'Perftest'
-        scriptType: 'ps'
+        scriptType: 'pscore'
         scriptLocation: 'inlineScript'
         inlineScript: 'Remove-AzureRmResourceGroup -Name $(webAppName)-rg'
       
