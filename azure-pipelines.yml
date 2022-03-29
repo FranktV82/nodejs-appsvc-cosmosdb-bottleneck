@@ -159,9 +159,9 @@ stages:
     - publish: $(System.DefaultWorkingDirectory)/loadTest
       artifact: result
 
-- task: AzureCLI@2
-  inputs:
-    azureSubscription: 'Perftest'
-    scriptType: 'pscore'
-    scriptLocation: 'inlineScript'
-    inlineScript: 'Remove-AzureRmResourceGroup -Name "loadtestdemoftv2-rg"'
+    - task: AzureCLI@2
+      inputs:
+        azureSubscription: 'Perftest'
+        scriptType: 'pscore'
+        scriptLocation: 'inlineScript'
+        inlineScript: 'Remove-AzureRmResourceGroup -Name "loadtestdemoftv2-rg"'
