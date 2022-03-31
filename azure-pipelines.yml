@@ -10,7 +10,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  webAppName: 'loadtestdemoftv2'
+  webAppName: 'loadtestdemoftv1'
   serviceConnection: 'Perftest'
   azureSubscriptionId: '8085b159-7289-4177-8749-f1298a8da7ea'
   loadTestResource: 'LoadTestAgentGit'
@@ -159,9 +159,9 @@ stages:
     - publish: $(System.DefaultWorkingDirectory)/loadTest
       artifact: result
 
-    - task: AzurePowerShell@5
+    - task: AzureCLI@2
       inputs:
         azureSubscription: 'Perftest'
-        ScriptType: 'InlineScript'
-        Inline: 'Remove-AzureRmResourceGroup -Name "loadtestdemoftv2-rg"'
-        azurePowerShellVersion: 'LatestVersion'
+        scriptType: 'pscore'
+        scriptLocation: 'inlineScript'
+        inlineScript: 'az group delete --resource-group $(webAppName)-rg -y'
